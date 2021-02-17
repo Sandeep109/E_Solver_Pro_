@@ -1,14 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { Component } from "react";
-import {StyleSheet, Text, View, TouchableOpacity, Modal, ScrollView, TextInput} from 'react-native';
-import { WebView } from 'react-native-webview';
+import {StyleSheet, Text, View, TouchableOpacity, Dimensions, Modal, ScrollView, TextInput} from 'react-native';
+import { WebView } from 'react-native';
 
 
-import MyHeader from "../components/myHeader";
+import MyHeader from "../../components/myHeader";
 import { RFValue } from "react-native-responsive-fontsize";
 
+const deviceHeight = Dimensions.get('window').height;
+const deviceWidth = Dimensions.get('window').width;
 
-export default class Android_studio_sites extends Component{
+export default class Android_developers extends Component{
 
   constructor(){
     super()
@@ -22,54 +24,12 @@ export default class Android_studio_sites extends Component{
         return(
             <View style={{ flex: 1 }}>
             <View style={{ flex: 0.1 }}>
-              <MyHeader title="Android Studio Errors"/>
+              <MyHeader title="Android developers"/>
             </View>
                 <View style={{ alignItems: "center" }}>
 
-            
-                  <TouchableOpacity
-                    style={[styles.button, { marginTop: 30 }]}
-                    title={"Github"}
-                    onPress={() => {
-                      this.props.navigation.navigate('github');
-                    }}
-                  >
-                    <Text
-                      style={styles.registerButtonText}
-                    >
-                      Github
-                    </Text>
-                  </TouchableOpacity>
+                <WebView source={{ uri: 'https://blog.jscrambler.com' }} style={{ marginTop: 20 }} />
 
-
-                  <TouchableOpacity
-                    style={[styles.button, { marginTop: 30 }]}
-                    title={"Unity Errors"}
-                    onPress={() => {                      
-                      this.props.navigation.navigate('stackoverflow');
-                    }}
-                  >
-                    <Text
-                      style={styles.registerButtonText}
-                    >
-                      StackOverFlow
-                    </Text>
-                  </TouchableOpacity>
-
-
-                  <TouchableOpacity
-                    style={[styles.button, { marginTop: 30 }]}
-                    title={"React Native Errors"}
-                    onPress={() => {
-                      this.props.navigation.navigate('android');
-                    }}
-                  >
-                    <Text
-                      style={styles.registerButtonText}
-                    >
-                      Android Developers
-                    </Text>
-                  </TouchableOpacity>
                   <TouchableOpacity
                     style={[styles.Bbutton, { marginTop: 30 }]}
                     title={"React  Errors"}
@@ -98,6 +58,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  webview: {
+    flex: 1,
+    backgroundColor: 'yellow',
+    width: deviceWidth,
+    height: deviceHeight
   },
   button: {
     width: "75%",

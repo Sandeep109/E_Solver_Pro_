@@ -4,11 +4,11 @@ import {StyleSheet, Text, View, TouchableOpacity, Modal, ScrollView, TextInput} 
 import { WebView } from 'react-native-webview';
 
 
-import MyHeader from "../components/myHeader";
+import MyHeader from "../../components/myHeader";
 import { RFValue } from "react-native-responsive-fontsize";
 
 
-export default class Android_studio_sites extends Component{
+export default class W3Schools extends Component{
 
   constructor(){
     super()
@@ -22,54 +22,12 @@ export default class Android_studio_sites extends Component{
         return(
             <View style={{ flex: 1 }}>
             <View style={{ flex: 0.1 }}>
-              <MyHeader title="Android Studio Errors"/>
+              <MyHeader title="W3Schools"/>
             </View>
                 <View style={{ alignItems: "center" }}>
 
-            
-                  <TouchableOpacity
-                    style={[styles.button, { marginTop: 30 }]}
-                    title={"Github"}
-                    onPress={() => {
-                      this.props.navigation.navigate('github');
-                    }}
-                  >
-                    <Text
-                      style={styles.registerButtonText}
-                    >
-                      Github
-                    </Text>
-                  </TouchableOpacity>
-
-
-                  <TouchableOpacity
-                    style={[styles.button, { marginTop: 30 }]}
-                    title={"Unity Errors"}
-                    onPress={() => {                      
-                      this.props.navigation.navigate('stackoverflow');
-                    }}
-                  >
-                    <Text
-                      style={styles.registerButtonText}
-                    >
-                      StackOverFlow
-                    </Text>
-                  </TouchableOpacity>
-
-
-                  <TouchableOpacity
-                    style={[styles.button, { marginTop: 30 }]}
-                    title={"React Native Errors"}
-                    onPress={() => {
-                      this.props.navigation.navigate('android');
-                    }}
-                  >
-                    <Text
-                      style={styles.registerButtonText}
-                    >
-                      Android Developers
-                    </Text>
-                  </TouchableOpacity>
+                  <WebView source={{uri:"https://www.w3schools.com/"}}/>
+                  
                   <TouchableOpacity
                     style={[styles.Bbutton, { marginTop: 30 }]}
                     title={"React  Errors"}

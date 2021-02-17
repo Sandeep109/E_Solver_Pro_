@@ -20,6 +20,7 @@ export default class Java_sites extends Component{
                     style={[styles.button, { marginTop: 30 }]}
                     title={"Github"}
                     onPress={() => {
+                      this.props.navigation.navigate('github');
                     }}
                   >
                     <Text
@@ -34,6 +35,7 @@ export default class Java_sites extends Component{
                     style={[styles.button, { marginTop: 30 }]}
                     title={"Unity Errors"}
                     onPress={() => {
+                      this.props.navigation.navigate('stackoverflow');
                     }}
                   >
                     <Text
@@ -48,6 +50,7 @@ export default class Java_sites extends Component{
                     style={[styles.button, { marginTop: 30 }]}
                     title={"React Native Errors"}
                     onPress={() => {
+                      this.props.navigation.navigate('quora');
                     }}
                   >
                     <Text

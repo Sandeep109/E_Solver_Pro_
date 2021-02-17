@@ -20,6 +20,7 @@ export default class Unity_sites extends Component{
                     style={[styles.button, { marginTop: 30 }]}
                     title={"Github"}
                     onPress={() => {
+                      this.props.navigation.navigate('github');
                     }}
                   >
                     <Text
@@ -34,12 +35,13 @@ export default class Unity_sites extends Component{
                     style={[styles.button, { marginTop: 30 }]}
                     title={"Unity Errors"}
                     onPress={() => {
+                      this.props.navigation.navigate('stackoverflow');
                     }}
                   >
                     <Text
                       style={styles.registerButtonText}
                     >
-                      StockOverFlow
+                      StackOverFlow
                     </Text>
                   </TouchableOpacity>
 
@@ -48,12 +50,13 @@ export default class Unity_sites extends Component{
                     style={[styles.button, { marginTop: 30 }]}
                     title={"React Native Errors"}
                     onPress={() => {
+                      this.props.navigation.navigate('unity_support');
                     }}
                   >
                     <Text
                       style={styles.registerButtonText}
                     >
-                      Unity Forums
+                      Unity Support
                     </Text>
                   </TouchableOpacity>
                   <TouchableOpacity
